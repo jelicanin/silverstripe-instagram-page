@@ -22,7 +22,7 @@ class InstagramPage extends Page {
 
 	private static $defaults = array (
 		'InstagramApiCallback' => '/',
-		'InstagramItemsCount' => '26',
+		'InstagramItemsCount' => '30',
 		'InstagramSearchTerm' => 'beach'
 	);
 
@@ -56,16 +56,16 @@ class InstagramPage_Controller extends Page_Controller {
 			'apiCallback' => $this->InstagramApiCallback
 		));
 
+		$media = false;
+		$output = false;
+		$out = array();
+
 		if (!$tag) {
 			$tag = $this->InstagramSearchTerm;
 		}
 		if (!$num) {
-			$tag = $this->InstagramItemsCount;
+			$num = $this->InstagramItemsCount;
 		}
-
-		$media = false;
-		$output = false;
-		$out = array();
 
 		try {
 			$media = $instagram->getTagMedia($tag, 50);
@@ -75,13 +75,15 @@ class InstagramPage_Controller extends Page_Controller {
 
 		if ($media) {
 			foreach ($media->data as $data) {
-				$item = array(
-					'caption' => $data->caption->text,
-					'thumb' => $data->images->thumbnail->url,
-					'image' => $data->images->standard_resolution->url,
-					'username' => $data->user->username
-				);
-				array_push($out, $item);
+				if (is_object($data)) {
+					$item = array(
+						'caption' => ($data->caption ? $data->caption->text : ""),
+						'thumb' => $data->images->thumbnail->url,
+						'image' => $data->images->standard_resolution->url,
+						'username' => $data->user->username
+					);
+					array_push($out, $item);
+				}
 			}
 
 			if ($shuffle) {
