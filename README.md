@@ -22,13 +22,13 @@
 
 ##Installation Instructions
 
-1. Place this directory in the root of your SilverStripe installation, rename the folder 'contact-page'.
+1. Place this directory in the root of your SilverStripe installation, rename the folder 'instagram-page'.
 2. Visit yoursite.com/dev/build?flush=1 to rebuild the database.
 3. Visit CMS and create new 'Instagram Page' Page type 'InstagramPage' and customize settings.
 
 ##Known Issues
 
-[GitHub Issue Tracker](https://github.com/jelicanin/silverstripe-contact-page/issues)
+[GitHub Issue Tracker](https://github.com/jelicanin/silverstripe-instagram-page/issues)
 
 
 ##Licence
