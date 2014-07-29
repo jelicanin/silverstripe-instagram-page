@@ -1,0 +1,6 @@
+---
+Name: instagram-page
+Before: 'mysite/*'
+After: 'framework/*','cms/*'
+---
+

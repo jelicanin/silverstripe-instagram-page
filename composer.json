@@ -1,0 +1,22 @@
+{
+    "name": "jelicanin/silverstripe-instagram-page",
+    "description": "Simple & configurable SilverStripe plugin to show Instagram photos stream",
+    "type": "silverstripe-module",
+    "homepage": "http://github.com/jelicanin/silverstripe-instagram-page",
+    "keywords": ["silverstripe", "instagram", "instagram-page", "module", "cms"],
+    "authors": [{
+        "name": "Milan Jelicanin",
+        "email": "milan.jelicanin@fractas.com"
+    }],
+    "support": {
+        "issues": "http://github.com/jelicanin/silverstripe-instagram-page/issues"
+    },
+    "require": {
+        "silverstripe/cms": "~3.0",
+        "silverstripe/framework": "~3.0"
+    },
+    "extra": {
+        "installer-name": "silverstripe-instagram-page"
+    },
+    "target-dir": "instagram-page"
+}
