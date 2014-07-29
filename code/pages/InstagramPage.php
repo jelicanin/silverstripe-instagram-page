@@ -23,9 +23,7 @@ class InstagramPage extends Page {
 	private static $defaults = array (
 		'InstagramApiCallback' => '/',
 		'InstagramItemsCount' => '26',
-		'InstagramSearchTerm' => 'hotel',
-		'InstagramApiKey' => '7a00055a3c0d466f8335a6b720bdca65',
-		'InstagramApiSecret' => '5967a6202032495e9a939e644cfd4462'
+		'InstagramSearchTerm' => 'beach'
 	);
 
 	function getCMSFields() {
