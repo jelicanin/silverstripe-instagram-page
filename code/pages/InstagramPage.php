@@ -73,7 +73,7 @@ class InstagramPage_Controller extends Page_Controller {
 			SS_Log::log(new Exception(print_r($e, true)), SS_Log::ERR);
 		}
 
-		if ($media) {
+		if (is_object($media) && isset($media->data)) {
 			foreach ($media->data as $data) {
 				if (is_object($data)) {
 					$item = array(
