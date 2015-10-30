@@ -16,7 +16,6 @@
         "silverstripe/framework": "~3.0"
     },
     "extra": {
-        "installer-name": "silverstripe-instagram-page"
-    },
-    "target-dir": "instagram-page"
+        "installer-name": "instagram-page"
+    }
 }
